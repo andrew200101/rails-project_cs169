@@ -1,0 +1,22 @@
+project:
+  name: 'hw-agile-iterations-fa21-01'
+  owner: 'governify'
+  teamId: '01'
+  identities:
+    pivotal:
+      url: 'https://www.pivotaltracker.com/n/projects/2540936'
+    heroku:
+      url: 'https://cs169-final.herokuapp.com/'
+  members:
+    member1:
+      name: 'Governify'
+      surname: 'Auditor' 
+      githubUsername: 'governifyauditor'
+      pivotalUsername: 'governifyauditor'
+      herokuEmail: 'governify.auditor@gmail.com'
+    member2:
+      name: 'Andrew'
+      surname: 'Zhang' 
+      githubUsername: 'andrew200101'
+      pivotalUsername: 'ANDREWZHANG2'
+      herokuEmail: 'ayyzhang@berkeley.edu'
