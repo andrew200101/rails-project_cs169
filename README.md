@@ -15,3 +15,5 @@ political events in their area as well as aggregate, share and view news items i
 
 Follow the [Getting Started Guide](./docs/01-getting-started.md) to get your localhost environment setup.
 
+
+[![Bluejay Dashboard](https://img.shields.io/badge/Bluejay-Dashboard_01-blue.svg)](http://dashboard.bluejay.governify.io/dashboard/script/dashboardLoader.js?dashboardURL=https://reporter.bluejay.governify.io/api/v4/dashboards/tpa-cs169a-2021-GH-cs169_hw-agile-iterations-fa21-01/main)
