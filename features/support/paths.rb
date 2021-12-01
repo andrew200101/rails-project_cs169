@@ -20,6 +20,12 @@ module NavigationHelpers
 
         when /^the Texas search page/ then '/search/texas'
         when /^the California search page/ then '/search/california'
+          
+        #mapping for part 3
+        when /^the map page/ then '/'
+        when /^the California state map/ then '/state/CA'
+        when /^Alameda County/ then '/search?address=Alameda%20County'
+        when /^the search page$/ then '/search'
 
         # Add more mappings here.
         # Here is an example that pulls values out of the Regexp:
