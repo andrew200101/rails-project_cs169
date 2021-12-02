@@ -1,8 +1,22 @@
 .container-fluid.py-5
     .row
         .col-md-8.offset-md-2
-        // TODO: add image of rep
+        // TODO: add image
+        =image_tag @representative.photoUrl
         .col-md-8.offset-md-2
             %h1.text-center = @representatives.name.to_s
             // TODO: add address
+            %p#address
+              = @representatives.line1
+            %p#address
+              = @representatives.city
+            %p#address
+              = @representatives.state
+            %p#address
+              = @representatives.zip
             // TODO: add political party
+            %p#party
+              = @representatives.party
+    .row
+        .col-md-8.offset-md-2
+        =link_to 'Back to representatives list', movies_path, class: 'btn btn-primary col-2'
