@@ -54,6 +54,10 @@ When(/^(?:|I )press "([^"]*)"$/) do |button|
     click_button(button)
 end
 
+When(/^(?:|I )click on (.+)$/) do |county|
+    visit path_to(county)
+end
+
 When(/^(?:|I )follow "([^"]*)"$/) do |link|
     click_link(link)
 end
@@ -247,3 +251,7 @@ Then(/^(?:|I )should have the following query string:$/) do |expected_pairs|
         assert_equal expected_params, actual_params
     end
 end
+
+# Then(/^show me the page$/) do
+#     save_and_open_page
+# end
