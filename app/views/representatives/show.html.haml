@@ -1,22 +1,20 @@
 .container-fluid.py-5
     .row
         .col-md-8.offset-md-2
-        // TODO: add image
-        =image_tag @representative.photoUrl
+            = image_tag @representatives.photoUrl || 'https://via.placeholder.com/150'
         .col-md-8.offset-md-2
-            %h1.text-center = @representatives.name.to_s
-            // TODO: add address
-            %p#address
-              = @representatives.line1
-            %p#address
-              = @representatives.city
-            %p#address
-              = @representatives.state
-            %p#address
-              = @representatives.zip
-            // TODO: add political party
-            %p#party
-              = @representatives.party
+            %h1.text-center
+                = @representatives.name.to_s
+            %h2.text-center
+                = @representatives.line1
+            %h2.text-center
+                = @representatives.city
+            %h2.text-center
+                = @representatives.state
+            %h2.text-center
+                = @representatives.zip
+            %h2.text-center
+                = @representatives.party
     .row
         .col-md-8.offset-md-2
-        =link_to 'Back to representatives list', movies_path, class: 'btn btn-primary col-2'
+        = link_to 'Back to representatives list', class: 'btn btn-primary col-2'
