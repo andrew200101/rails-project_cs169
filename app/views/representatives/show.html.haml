@@ -1,7 +1,7 @@
 .container-fluid.py-5
     .row
         .col-md-8.offset-md-2
-            = image_tag @representatives.photoUrl || 'https://via.placeholder.com/200'
+            = image_tag @representatives.photoUrl || 'https://via.placeholder.com/150'
         .col-md-8.offset-md-2
             %h1.text-center
                 = @representatives.name.to_s
