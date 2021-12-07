@@ -50,10 +50,17 @@ When(/^(?:|I )go to (.+)$/) do |page_name|
     visit path_to(page_name)
 end
 
+When(/^(?:|I )look up (.+)$/) do |page_name|
+    visit path_to(page_name)
+end
+
 When(/^(?:|I )press "([^"]*)"$/) do |button|
     click_button(button)
 end
 
+When (/^(?:|I )should be redirected to (.+)$/) do |page_name|
+  visit path_to(page_name)
+end
 When(/^(?:|I )click on (.+)$/) do |county|
     visit path_to(county)
 end

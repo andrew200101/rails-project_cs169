@@ -39,9 +39,13 @@ class MyNewsItemsController < SessionController
     private
 
     def set_representative
+        begin
         @representative = Representative.find(
-            params[:representative_id]
-        )
+                params[:representative_id]
+            )
+       rescue ActiveRecord::RecordNotFound
+          redirect_to events_path
+      end
     end
 
     def set_representatives_list

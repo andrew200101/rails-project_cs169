@@ -7,3 +7,8 @@ Scenario: Clicking on county redirects to proper search results
   When I click on Alameda County 
   Then I should be on the search page
   And I should see Phong La
+
+
+
+
+  
