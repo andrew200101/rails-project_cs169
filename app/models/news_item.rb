@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class NewsItem < ApplicationRecord
-    belongs_to :representative
+    belongs_to :representative, :issue
     has_many :ratings, dependent: :delete_all
 
     def self.find_for(representative_id)
