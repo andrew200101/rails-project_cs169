@@ -40,5 +40,12 @@ Rails.application.routes.draw do
                                                                       via: [:delete]
         get '/representatives/:representative_id/show_page', :to => 'representatives#show', :as => :show_page
     end
+  
     get '/search/(:address)' => 'search#search', :as => 'search_representatives'
+      # Routes for News Items
+    resources :news_items
+  
+    # Routes for My News Items
+    resources :my_news_items
+    get '/my_news_items/new' => 'my_news_items#new'
 end

@@ -7,6 +7,8 @@ class MyNewsItemsController < SessionController
 
     def new
         @news_item = NewsItem.new
+        @issues_list = NewsItem.issues_list
+        @ratings = NewsItem.ratings
     end
 
     def edit; end

@@ -12,12 +12,24 @@ module NavigationHelpers
     #
     # step definition in web_steps.rb
     #
-    # rubocop:disable Metrics/CyclomaticComplexity
+    # rubocop:disable Metrics
     def path_to(page_name)
         case page_name
 
         when /^the home\s?page$/
             '/'
+
+        when /^login page/ then 'login'
+        when /^google login/ then '/auth/google_oauth2/callback'
+        when /^github login/ then '/auth/github/callback'
+
+        when /^representative MJ/ then 'news_items?representative_id=178'
+
+        when /^the create events page/ then '/my_events/new'
+        when /^create new my events/ then '/my_events'
+
+        when /^the my news item page/ then '/my_news_items/new'
+        when /^the new news item page/ then '/my_news_items'
 
         when /^the Texas search page/ then '/search/texas'
         when /^the California search page/ then '/search/california'
@@ -28,6 +40,7 @@ module NavigationHelpers
         when /^Alameda County/ then '/search?address=Alameda%20County'
         when /^the search page$/ then '/search'
 
+        when /^the view news item page/ then '/representatives/178/representatives/178/my_news_item/21'
         # Add more mappings here.
         # Here is an example that pulls values out of the Regexp:
         #
@@ -45,7 +58,7 @@ module NavigationHelpers
             end
         end
     end
-    # rubocop:enable Metrics/CyclomaticComplexity
+    # rubocop:enable Metrics
 end
 
 World(NavigationHelpers)
