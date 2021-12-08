@@ -13,14 +13,11 @@ class NewsItemsController < ApplicationController
     private
 
     def set_representative
-      begin
         @representative = Representative.find(
-                params[:representative_id]
-            )
-       rescue ActiveRecord::RecordNotFound
-          redirect_to events_path
-      end
-        
+            params[:representative_id]
+        )
+    rescue ActiveRecord::RecordNotFound
+        redirect_to events_path
     end
 
     def set_news_item

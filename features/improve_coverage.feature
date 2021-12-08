@@ -8,15 +8,16 @@ Scenario: test all oauth buttons
  Then I should be redirected to the home page
  
 Scenario: test my events methods
- Given I look up representative Martin J. Jenkins
+ Given I look up representative MJ
  
 Scenario: test my events item
-  Given I am on the create new my events page
+  Given I am on the create events page
   And I am on create new my events
 
  
 Scenario: test my news item
   Given I am on the my news item page
   And I create a new my news item
+
   
 
